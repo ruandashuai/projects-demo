@@ -5,19 +5,40 @@
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="https://www.layuicdn.com/layui/css/layui.css"/>
     <script src="https://www.layuicdn.com/layui/layui.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
 </head>
 <body>
-<b>
-    文件上传 <br>
-    <div class="layui-upload">
-        <button type="button" class="layui-btn" id="test3">
-            <i class="layui-icon"></i>
-            上传文件
-        </button>
+<center>
+    <div>
+        文件上传 <br>
+        <div class="layui-upload">
+            <button type="button" class="layui-btn" id="test3">
+                <i class="layui-icon"></i>
+                上传文件
+            </button>
+        </div>
     </div>
-</b>
+    <hr>
+    <div>
+        下载Excel
+        <button onclick="download()">下载Excel</button>
+    </div>
+</center>
 </body>
 <script type="text/javascript">
+    function download() {
+        $.ajax({
+            type: 'GET',
+            url: '/download',
+            success: function (data) {
+                layer.msg(data.message)
+            },
+            error: function (res) {
+                console.log(res)
+            }
+        });
+    }
+
     layui.use('upload', function () {
         const upload = layui.upload;
         upload.render({
