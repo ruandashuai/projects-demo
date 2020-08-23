@@ -34,10 +34,11 @@ public class StudentController {
              * 2、sheet()：获取第一个sheet
              * 3、进行读操作
              */
-
+            /*
             EasyExcel.read(file.getInputStream(), Student.class, new ExcelListener())
                     .sheet()
                     .doRead();
+            */
 
             /**
              * 返回Excel所有的行，装到一个List中
