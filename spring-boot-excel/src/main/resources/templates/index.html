@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="https://www.layuicdn.com/layui/css/layui.css"/>
+    <script src="https://www.layuicdn.com/layui/layui.js"></script>
+</head>
+<body>
+<b>
+    文件上传 <br>
+    <div class="layui-upload">
+        <button type="button" class="layui-btn" id="test3">
+            <i class="layui-icon"></i>
+            上传文件
+        </button>
+    </div>
+</b>
+</body>
+<script type="text/javascript">
+    layui.use('upload', function () {
+        const upload = layui.upload;
+        upload.render({
+            elem: '#test3',
+            // 上传接口
+            url: '/upload',
+            accept: 'file',
+            // 能上传的文件类型
+            exts: 'xls|xlsx',
+            done: function (res) {
+                console.log(res)
+            },
+            error: function () {
+                layer.msg("上传出现错误！")
+            }
+        });
+
+    })
+
+
+</script>
+</html>
