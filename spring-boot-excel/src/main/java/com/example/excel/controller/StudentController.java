@@ -62,7 +62,7 @@ public class StudentController {
     }
 
 
-    @RequestMapping("/download")
+    @RequestMapping("/easyexcel/download")
     public JsonResult download(HttpServletResponse response) throws IOException {
 
         log.info("---下载开始---{}", new Date());
