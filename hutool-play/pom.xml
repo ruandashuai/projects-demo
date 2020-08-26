@@ -22,6 +22,18 @@
     </properties>
 
     <dependencies>
+        <!--分词器引擎-->
+        <dependency>
+            <groupId>com.chenlb.mmseg4j</groupId>
+            <artifactId>mmseg4j-core</artifactId>
+            <version>1.10.0</version>
+        </dependency>
+        <!--        表情-->
+        <dependency>
+            <groupId>com.vdurmont</groupId>
+            <artifactId>emoji-java</artifactId>
+            <version>4.0.0</version>
+        </dependency>
         <!--引入zxing-->
         <dependency>
             <groupId>com.google.zxing</groupId>
