@@ -1,7 +1,6 @@
 package com.hutool;
 
 import cn.hutool.extra.emoji.EmojiUtil;
-import com.vdurmont.emoji.Emoji;
 
 /**
  * 表情
